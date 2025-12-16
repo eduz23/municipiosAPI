@@ -18,4 +18,4 @@ Uma API REST que fornece informações sobre municípios brasileiros, com dados 
 - **PATCH /municipios/{id}**: Atualiza as informações de um município pelo **ID**.
   - **Parâmetros**:
     - `id`: ID do município a ser atualizado.
-    - Dados no corpo da requisição para atualização (por exemplo, nome, população, etc).
+    - Dados no corpo da requisição para atualização (nome, estado, característica)
