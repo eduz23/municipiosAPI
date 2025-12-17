@@ -149,7 +149,7 @@ async function salvarMudanca() {
   try {
     await fetch(`${API}/${idEditar}`, {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "minha-chave": API_CLIENT_KEY},
       body: JSON.stringify(novoMunicipio),
     });
     alterar.style.display = "none";
