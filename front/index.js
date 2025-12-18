@@ -120,7 +120,8 @@ async function inserirMunicipio() {
 async function deletar(id) {
   try {
     const resposta = await fetch(`${API}/${id}`, {
-      method: "DELETE", "minha-chave": API_CLIENT_KEY
+      method: "DELETE",
+      headers: { "minha-chave": API_CLIENT_KEY }
     });
     carregarMunicipios();
   } catch (err) {
@@ -132,7 +133,9 @@ async function alterarJanela(id) {
   alterar.style.display = "block";
   listagem.style.pointerEvents = "none";
   idEditar = id;
-  const resposta = await fetch(`${API}/${id}`);
+  const resposta = await fetch(`${API}/${id}`, {
+    headers: { "minha-chave": API_CLIENT_KEY }
+  });
   const municipio = await resposta.json();
   document.getElementById("nomeUf").value = municipio.nome;
   document.getElementById("estadoUf").value = municipio.estado;
