@@ -1,4 +1,5 @@
-const API = "https://municipiosapi-2.onrender.com/municipios";
+//const API = "https://municipiosapi-2.onrender.com/municipios";
+const API = "http://127.0.0.1:3000/municipios";
 let limit = 3;
 let offset = 0;
 let lastScrollTop = 0;
