@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
     offset =  parseInt(offset) || 0;    
     limit =   parseInt(limit) || 100;
     
-    console.log(estado,ordem,offset,limit);
     const query = `
     SELECT * FROM municipios
     where estado ilike  $1
